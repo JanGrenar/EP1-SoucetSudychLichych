@@ -8,6 +8,9 @@ Module Program
         Dim licha As Integer
         Dim cislo As Integer
         Dim pocetCisel As Integer
+        Dim soucetsuda As Integer
+        Dim soucetlicha As Integer
+
 
         Console.WriteLine("Zadejte celkový poèet èísel, který bude aplikace chtít od uživatele zadat:")
         pocetCisel = Integer.Parse(Console.ReadLine())
@@ -22,14 +25,17 @@ Module Program
             End While
 
             If cislo Mod 2 = 0 Then
-                suda += cislo
+                suda += 1
+                soucetsuda += cislo
             Else
-                licha += cislo
+                licha += 1
+                soucetlicha += cislo
             End If
         Next
 
-        Console.WriteLine($"Souèet sudých je {suda} , souèet lichých je {licha}")
-        Console.ReadLine()
+        Console.WriteLine($"Souèet sudých je {soucetsuda}, souèet lichých je {soucetlicha}")
+        Console.WriteLine($"Poèet sudých je {suda}, poèet lichých je {licha}")
+
 
     End Sub
 End Module
