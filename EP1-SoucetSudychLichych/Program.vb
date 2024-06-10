@@ -16,7 +16,10 @@ Module Program
         Console.WriteLine("Program vypíše kolik jich je sudých a kolik lichých")
 
         For i As Integer = 1 To pocetCisel
-            cislo = Integer.Parse(Console.ReadLine())
+
+            While Not Integer.TryParse(Console.ReadLine(), cislo)
+                Console.WriteLine("Neplatný vstup. Zadejte prosím celé èíslo:")
+            End While
 
             If cislo Mod 2 = 0 Then
                 suda += 1
