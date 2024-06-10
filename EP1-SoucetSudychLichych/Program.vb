@@ -17,8 +17,8 @@ Module Program
 
         For i As Integer = 1 To pocetCisel
 
-            While Not Integer.TryParse(Console.ReadLine(), cislo)
-                Console.WriteLine("Neplatný vstup. Zadejte prosím celé èíslo:")
+            While Not Integer.TryParse(Console.ReadLine(), cislo) OrElse cislo < 0
+                Console.WriteLine("Neplatný vstup. Zadejte prosím celé kladné èíslo:")
             End While
 
             If cislo Mod 2 = 0 Then
