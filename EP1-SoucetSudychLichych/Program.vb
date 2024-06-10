@@ -22,13 +22,13 @@ Module Program
             End While
 
             If cislo Mod 2 = 0 Then
-                suda += 1
+                suda += cislo
             Else
-                licha += 1
+                licha += cislo
             End If
         Next
 
-        Console.WriteLine($"Sudých je {suda} , lichých je {licha}")
+        Console.WriteLine($"Souèet sudých je {suda} , souèet lichých je {licha}")
         Console.ReadLine()
 
     End Sub
